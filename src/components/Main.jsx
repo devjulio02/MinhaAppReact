@@ -1,18 +1,36 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
 
-const Main = () => {
+
+function Main() {
   return (
-    <main>
-      <Container className="mt-4">
-        <Row>
-          <Col className="text-center">
-            <h1>Seja Bem-vindo(a)!</h1>
-            <h2>Esta é a MinhaAppReact</h2>
-          </Col>
-        </Row>
-      </Container>
-    </main>
+    <Container>
+      <Carousel className='carrossel'>
+        <Carousel.Item interval={2000}>
+          <Image className='imagem-carrossel' src="../src/assets/img1.png" />
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={2000}>
+          <Image className='imagem-carrossel' src="../src/assets/img2.png" />
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={2000}>
+          <Image className='imagem-carrossel' src="../src/assets/img3.png" />
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    </Container>
   );
-};
+}
 
 export default Main;
