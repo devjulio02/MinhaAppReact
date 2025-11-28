@@ -1,0 +1,14 @@
+.cards-wrapper {
+  margin-top: 60px; /* separa dos outros elementos */
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}

@@ -1,0 +1,11 @@
+.carousel-wrapper {
+  max-width: 70%;      /* largura mais fina */
+  margin: 40px auto;   /* centraliza e cria ESPAÇO em cima e embaixo */
+}
+
+.imagem-carrossel {
+  width: 100%;
+  height: 380px;        /* altura padrão */
+  object-fit: cover;    /* recorte elegante */
+  border-radius: 12px;
+}
