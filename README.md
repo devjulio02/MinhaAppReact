@@ -1,3 +1,6 @@
+# link para a aplicação python CensoEscolarDataApp
+[Clique para acessar o link](https://github.com/devjulio02/CensoEscolarDataApp.git)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

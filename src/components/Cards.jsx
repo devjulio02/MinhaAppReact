@@ -1,29 +1,27 @@
-import { Container } from "react-bootstrap";
-import instituicoesEnsino from "../datasets/censoEscolar.js";
-import { Button, Card, Col, Row } from "react-bootstrap";
+import { Container, Button, Card, Col, Row } from "react-bootstrap";
+import iesTop3 from "../datasets/ies_paraiba_top3.json";
 import "./Cards.css";
 
 const Cards = () => {
-  let instituicoesEnsinoJson = [...instituicoesEnsino];
   return (
     <Container className="cards-wrapper">
       <Row>
-        {instituicoesEnsinoJson.map((instituicaoEnsino) => {
-          return (
-            <Col>
-              <Card>
-                <Card.Img variant="top" src={instituicaoEnsino.urlImagem} />
-                <Card.Body>
-                  <Card.Title>{instituicaoEnsino.nome}</Card.Title>
-                  <Card.Text>
-                    Município: {instituicaoEnsino.municipio}
-                  </Card.Text>
-                  <Button variant="primary">Saiba Mais</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          );
-        })}
+        {iesTop3.map((ies) => (
+          <Col key={ies.CO_ENTIDADE}>
+            <Card>
+              <Card.Img variant="top" src={`/public/${ies.CO_ENTIDADE}.jpg`} 
+              />
+              <Card.Body>
+                <Card.Title>{ies.NO_ENTIDADE}</Card.Title>
+                <Card.Text>
+                  Município: {ies.NO_MUNICIPIO} <br />
+                  Matrículas totais: {ies.TOTAL_MATRICULAS}
+                </Card.Text>
+                <Button variant="primary">Saiba Mais</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
