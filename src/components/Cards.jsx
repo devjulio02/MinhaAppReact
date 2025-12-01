@@ -9,8 +9,9 @@ const Cards = () => {
         {iesTop3.map((ies) => (
           <Col key={ies.CO_ENTIDADE}>
             <Card>
-              <Card.Img variant="top" src={`/public/${ies.CO_ENTIDADE}.jpg`} 
+              <Card.Img variant="top" src={`/${ies.CO_ENTIDADE}.jpg`} 
               />
+              
               <Card.Body>
                 <Card.Title>{ies.NO_ENTIDADE}</Card.Title>
                 <Card.Text>
